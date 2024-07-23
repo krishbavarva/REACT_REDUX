@@ -6,8 +6,6 @@ import { incNumber, decNumber } from './action/Index'
 
 function App() {
   const addState= useSelector((state) => state.changeTheNumber)
-  const removeState = useSelector((state) => state.changeNumber)
-  const final = addState + removeState
   const dispatch = useDispatch()
 
   return (
@@ -15,7 +13,7 @@ function App() {
     <h1>welocome to redux</h1>
     <div className="display">
       <button onClick={() => dispatch(decNumber())} title='Decrement' >-</button>
-      <h1>{final}</h1>
+      <h1>{addState}</h1>
       <button onClick={() => dispatch(incNumber())} title='Increment' >+</button>
     </div>
     </>
