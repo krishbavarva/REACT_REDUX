@@ -5,9 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { incNumber, decNumber } from './action/Index'
 
 function App() {
-  const myState= useSelector((state) => state.changeNumber)
-  const meState= useSelector((state) => state.changeTheNumber)
-  const final = (myState + meState)
+  const myState= useSelector((state) => state.changeTheNumber)
   const dispatch = useDispatch()
 
   return (
@@ -15,7 +13,7 @@ function App() {
     <h1>welocome to redux</h1>
     <div className="display">
       <button onClick={() => dispatch(decNumber())} title='Decrement' >-</button>
-      <h1>{final}</h1>
+      <h1>{myState}</h1>
       <button onClick={() => dispatch(incNumber())} title='Increment' >+</button>
     </div>
     </>
