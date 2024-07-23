@@ -1,7 +1,9 @@
 import changeTheNumber from "./UpDown";
 import { combineReducers } from "redux";
+import changeNumber from "./DownUp";
 
 const Rootreducer = combineReducers({
-    changeTheNumber//add anoter reducer
+    changeTheNumber , 
+    changeNumber
 })
 export default Rootreducer
